@@ -21,6 +21,134 @@
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/custom-animation.css">
    <link rel="stylesheet" href="assets/css/main.css">
+   <style>
+      section {
+      text-align: center;
+      padding: 1.5em 1em;
+      }
+
+      .heading {
+         margin-bottom: 1em;
+      }
+
+      .figure {
+         background: #1d1d1d;
+         display: inline-block;
+         margin: 10px;
+         max-width: 280px;
+         min-width: 230px;
+         overflow: hidden;
+         position: relative;
+         text-align: center;
+         width: 100%;
+      }
+
+      .figure * {
+         -webkit-transition: all 0.35s ease;
+         transition: all 0.35s ease;
+      }
+
+      /* Section 4 - Hover Effect #04 */
+
+      .section-4 {   
+         background: #1d1d1d;
+         color: #efefef;
+      }
+
+      .section-4 .figure {
+      background: #efefef;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.15);
+      }
+
+      .section-4 .figure img {
+         vertical-align: top;
+         object-fit: cover;
+         min-width: 100%;
+         height: 25em;
+      }
+
+      .section-4 .figure div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: table;
+      padding: 0 20px;
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      }
+
+      .section-4 .figure div:before,
+      .section-4 .figure div:after {
+      position: absolute;
+      display: block;
+      width: 0%;
+      height: 100%;
+      content: '';
+      background-color: rgba(29,29,29,0.5);
+      opacity: 0.8;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-tranisition: all 0.35s ease-in-out;
+      transition: all 0.35s ease-in-out;
+      }
+
+      .section-4 .figure div:before {
+      right: -150%;
+      }
+
+      .section-4 .figure div:after {
+      left: -150%;
+      }
+
+      .section-4 .figure h3 {
+      color: #1d1d1d;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin: 0;
+      opacity: 0;
+      }
+
+      .section-4 .figure h3 span {
+      font-weight: 700;
+      display: block;
+      }
+
+      .section-4 .figure a {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      }
+
+      .section-4 .figure:hover img,
+      .section-4 .figure.hover img {
+      opacity: 0.3;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      }
+
+      .section-4 .figure:hover h3,
+      .section-4 .figure.hover h3 {
+      opacity: 1;
+      }
+
+      .section-4 .figure:hover div,
+      .section-4 .figure.hover div {
+      opacity: 1;
+      }
+
+      .section-4 .figure:hover div:before,
+      .section-4 .figure.hover div:before,
+      .section-4 .figure:hover div:after,
+      .section-4 .figure.hover div:after {
+      width: 150%;
+      }
+
+
+   </style>
 </head>
 
 <body>
@@ -593,8 +721,55 @@
                </div>
             </div>
             <!-- service area end -->
+            
+
+            <section class="section-4">
+               <div class="heading">
+                 <span><h2 style="color: white;">Products</h2></span>
+               </div>
+               <div class="row" style="display: flex;
+               align-items: center;
+               justify-content: center;">
+                 <figure class="figure">
+                   <img src="assets/img/products/diamonds-1.jpeg" alt="">
+                   <div>
+                     <h3>Mineral <span>Diamonds</span></h3>
+                     <!-- <a href=""></a> -->
+                   </div>
+                 </figure>
+                 <figure class="figure">
+                   <img src="assets/img/products/diamonds-2.jpeg" alt="">
+                   <div>
+                     <h3>Mineral <span>Diamonds</span></h3>
+                     <!-- <a href=""></a> -->
+                   </div>
+                 </figure>
+                 <figure class="figure">
+                   <img src="assets/img/products/diamonds-3.jpeg" alt="">
+                   <div>
+                     <h3>Mineral <span>Diamonds</span></h3>
+                     <!-- <a href=""></a> -->
+                   </div>
+                 </figure>
+                 <figure class="figure">
+                  <img src="assets/img/products/diamonds-4.jpeg" alt="">
+                  <div>
+                    <h3>Mineral <span>Diamonds</span></h3>
+                    <!-- <a href=""></a> -->
+                  </div>
+                </figure>
+                <figure class="figure">
+                  <img src="assets/img/products/gems-1.jpeg" alt="">
+                  <div>
+                    <h3>Mineral <span>Gem Stones</span></h3>
+                    <!-- <a href=""></a> -->
+                  </div>
+                </figure>
+               </div>
+             </section>
 
             <!-- about area start -->
+            <br>
             <div class="tp-about-5-area tp-about-5-style p-relative pb-150">
                <div class="tp-about-5-big-text d-none d-xl-block">
                   <h6>About Us</h6>
@@ -648,21 +823,21 @@
                            <div class="tp-about-5-thumb p-relative">
                               <div class="tp-hover-distort-wrapper">
                                  <div class="canvas"></div>
-                                 <div class="tp-hover-distort" data-displacementImage="assets/img/webgl/10.jpg">
-                                    <img class="tp-hover-distort-img front" src="assets/img/about/thumb-5-1.jpg" alt="">
-                                    <img class="tp-hover-distort-img back" src="assets/img/about/thumb-5-1.jpg" alt="">
+                                 <div class="tp-hover-distort" data-displacementImage="assets/img/mining/copper-cathode.jpg">
+                                    <img class="tp-hover-distort-img front" src="assets/img/mining/copper-cathode.jpg" alt="">
+                                    <img class="tp-hover-distort-img back" src="assets/img/mining/copper-cathode.jpg" alt="">
                                  </div>
                               </div>
                               <div class="tp-about-5-shape-1">
-                                 <img src="assets/img/about/shape-5-1.png" alt="">
+                                 <img src="assets/img/mining/copper-cathode.jpg" alt="">
                               </div>
                            </div>
                            <div class="tp-about-5-thumb-sm">
                               <div class="tp-hover-distort-wrapper">
                                  <div class="canvas"></div>
-                                 <div class="tp-hover-distort" data-displacementImage="assets/img/webgl/10.jpg">
-                                    <img class="tp-hover-distort-img front" src="assets/img/about/thumb-5-2.jpg" alt="">
-                                    <img class="tp-hover-distort-img back" src="assets/img/about/thumb-5-2.jpg" alt="">
+                                 <div class="tp-hover-distort" data-displacementImage="assets/img/mining/mining-overview.jpg">
+                                    <img class="tp-hover-distort-img front" src="assets/img/mining/mining-overview.jpg" alt="">
+                                    <img class="tp-hover-distort-img back" src="assets/img/mining/mining-overview.jpg" alt="">
                                  </div>
                               </div>
                            </div>
@@ -728,9 +903,9 @@
                                           <img src="assets/img/mining/gold-mines-wallpaper-preview.jpg" alt="">
                                        </div>
                                        <div class="tp-project-5-content black-bg">
-                                          <h6 class="tp-project-5-title"><a href="project-details.html">Extracting and refining</a></h6>
+                                          <h6 class="tp-project-5-title"><a href="about-us.html">Extracting and refining</a></h6>
                                           <p>Once a suitable site is found, our team uses various methods such as open-pit mining or underground mining to extract the ore from the ground.</p>
-                                          <a class="tp-btn-border-lg white-border" href="project-details.html">
+                                          <a class="tp-btn-border-lg white-border" href="about-us.html">
                                              <span>Read More</span>
                                           </a>
                                        </div>
@@ -742,9 +917,9 @@
                                           <img src="assets/img/mining/africastocks.jpg" alt="">
                                        </div>
                                        <div class="tp-project-5-content black-bg">
-                                          <h6 class="tp-project-5-title"><a href="project-details.html">In-Situ Mining</a></h6>
+                                          <h6 class="tp-project-5-title"><a href="about-us.html">In-Situ Mining</a></h6>
                                           <p>We also ise this cool method to extract minerals from deep underground without having to dig up the whole area.</p>
-                                          <a class="tp-btn-border-lg white-border" href="project-details.html">
+                                          <a class="tp-btn-border-lg white-border" href="about-us.html">
                                              <span>Read More</span>
                                           </a>
                                        </div>
@@ -756,11 +931,11 @@
                                           <img src="assets/img/knee-deep.jpg" alt="">
                                        </div>
                                        <div class="tp-project-5-content black-bg">
-                                          <h6 class="tp-project-5-title"><a href="project-details.html">Knee Dipping</a>
+                                          <h6 class="tp-project-5-title"><a href="about-us.html">Knee Dipping</a>
                                           </h6>
                                           <p>The technique involves wading into waterways with rubber boots or waders
                                           </p>
-                                          <a class="tp-btn-border-lg white-border" href="project-details.html">
+                                          <a class="tp-btn-border-lg white-border" href="about-us.html">
                                              <span>Read More</span>
                                           </a>
                                        </div>
@@ -772,11 +947,11 @@
                                           <img src="assets/img/mwilunga_mining_disctrict.jpg" alt="">
                                        </div>
                                        <div class="tp-project-5-content black-bg">
-                                          <h6 class="tp-project-5-title"><a href="project-details.html">Gold Mining with
+                                          <h6 class="tp-project-5-title"><a href="about-us.html">Gold Mining with
                                                 shovel</a></h6>
                                           <p>Gold mining with a shovel might seem like an outdated method, but it can
                                              still be effective for small-scale operations</p>
-                                          <a class="tp-btn-border-lg white-border" href="project-details.html">
+                                          <a class="tp-btn-border-lg white-border" href="about-us.html">
                                              <span>Read More</span>
                                           </a>
                                        </div>
@@ -788,12 +963,12 @@
                                           <img src="assets/img/mining-gold.jpg" alt="">
                                        </div>
                                        <div class="tp-project-5-content black-bg">
-                                          <h6 class="tp-project-5-title"><a href="project-details.html">Placer
+                                          <h6 class="tp-project-5-title"><a href="about-us.html">Placer
                                                 mining</a></h6>
                                           <p>We use pans or sluice boxes to separate the lighter sediment from the
                                              heavier gold particles, which have settled at the bottom due to their high
                                              density.</p>
-                                          <a class="tp-btn-border-lg white-border" href="project-details.html">
+                                          <a class="tp-btn-border-lg white-border" href="about-us.html">
                                              <span>Read More</span>
                                           </a>
                                        </div>
