@@ -146,6 +146,7 @@ li,
   --tp-grey-1: #F8F8F8;
   --tp-text-body: #54595F;
   --tp-theme-1: #A6A182;
+  --loading-back-1: #272727;
 }
 
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -2011,7 +2012,7 @@ div.demo img {
 /*  2.5 Preloader
 /*----------------------------------------*/
 #loading {
-  background-color: var(--tp-theme-1);
+  background-color: var(--loading-back-1);
   height: 100%;
   width: 100%;
   position: fixed;
